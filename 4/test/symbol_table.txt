@@ -1,0 +1,27 @@
+Имя                | Тип                      | Категория     | Область            | Объявл. | Иниц.  | Строка
+--------------------------------------------------------------------------------------------------------------
+std::cout          | std::ostream             | builtin       | global             | True    | True   | -
+add                | int                      | function      | global             | True    | True   | 5
+isPrime            | bool                     | function      | global             | True    | True   | 6
+average            | double                   | function      | global             | True    | True   | 15
+factorial          | int                      | function      | global             | True    | True   | 21
+main               | int                      | function      | global             | True    | True   | 30
+x                  | int                      | parameter     | function_add_1     | True    | True   | 5
+y                  | int                      | parameter     | function_add_1     | True    | True   | 5
+n                  | int                      | parameter     | function_isPrime_2 | True    | True   | 6
+i                  | int                      | variable      | for_3              | True    | True   | 10
+v                  | const std::vector<int>&  | parameter     | function_average_5 | True    | True   | 15
+sum                | long long                | variable      | function_average_5 | True    | True   | 17
+x                  | int                      | range variable | range_for_6        | True    | True   | 18
+n                  | int                      | parameter     | function_factorial_7 | True    | True   | 21
+result             | int                      | variable      | function_factorial_7 | True    | True   | 22
+i                  | int                      | variable      | function_factorial_7 | True    | True   | 23
+a                  | int                      | variable      | function_main_9    | True    | True   | 31
+b                  | int                      | variable      | function_main_9    | True    | True   | 31
+c                  | int                      | variable      | function_main_9    | True    | True   | 32
+ok                 | bool                     | variable      | function_main_9    | True    | True   | 34
+nums               | std::vector<int>         | variable      | function_main_9    | True    | True   | 40
+i                  | int                      | variable      | for_12             | True    | True   | 41
+s                  | int                      | variable      | function_main_9    | True    | True   | 44
+tricky             | std::string              | variable      | function_main_9    | True    | True   | 48
+quote              | char                     | variable      | function_main_9    | True    | True   | 49

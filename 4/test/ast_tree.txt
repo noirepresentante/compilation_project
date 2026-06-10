@@ -1,0 +1,693 @@
+Program
+└── functions
+    ├── FunctionDecl
+    │   ├── return_type: Type
+    │   │   ├── name: int
+    │   │   ├── base: int
+    │   │   ├── const: false
+    │   │   ├── reference: false
+    │   │   └── generic_args: []
+    │   ├── name: add
+    │   ├── params
+    │   │   ├── Param
+    │   │   │   ├── type: Type
+    │   │   │   │   ├── name: int
+    │   │   │   │   ├── base: int
+    │   │   │   │   ├── const: false
+    │   │   │   │   ├── reference: false
+    │   │   │   │   └── generic_args: []
+    │   │   │   ├── name: x
+    │   │   │   ├── line: 5
+    │   │   │   └── column: 13
+    │   │   └── Param
+    │   │       ├── type: Type
+    │   │       │   ├── name: int
+    │   │       │   ├── base: int
+    │   │       │   ├── const: false
+    │   │       │   ├── reference: false
+    │   │       │   └── generic_args: []
+    │   │       ├── name: y
+    │   │       ├── line: 5
+    │   │       └── column: 20
+    │   ├── body: BlockStmt
+    │   │   └── statements
+    │   │       └── ReturnStmt
+    │   │           └── expr: BinaryExpr
+    │   │               ├── operator: +
+    │   │               ├── left: IdentifierExpr
+    │   │               │   └── name: x
+    │   │               └── right: IdentifierExpr
+    │   │                   └── name: y
+    │   ├── line: 5
+    │   └── column: 5
+    ├── FunctionDecl
+    │   ├── return_type: Type
+    │   │   ├── name: bool
+    │   │   ├── base: bool
+    │   │   ├── const: false
+    │   │   ├── reference: false
+    │   │   └── generic_args: []
+    │   ├── name: isPrime
+    │   ├── params
+    │   │   └── Param
+    │   │       ├── type: Type
+    │   │       │   ├── name: int
+    │   │       │   ├── base: int
+    │   │       │   ├── const: false
+    │   │       │   ├── reference: false
+    │   │       │   └── generic_args: []
+    │   │       ├── name: n
+    │   │       ├── line: 6
+    │   │       └── column: 18
+    │   ├── body: BlockStmt
+    │   │   └── statements
+    │   │       ├── IfStmt
+    │   │       │   ├── condition: BinaryExpr
+    │   │       │   │   ├── operator: <=
+    │   │       │   │   ├── left: IdentifierExpr
+    │   │       │   │   │   └── name: n
+    │   │       │   │   └── right: LiteralExpr
+    │   │       │   │       ├── literal_type: CONSTANT_INT
+    │   │       │   │       └── value: 1
+    │   │       │   ├── then: ReturnStmt
+    │   │       │   │   └── expr: LiteralExpr
+    │   │       │   │       ├── literal_type: CONSTANT_BOOL
+    │   │       │   │       └── value: false
+    │   │       │   └── else: None
+    │   │       ├── IfStmt
+    │   │       │   ├── condition: BinaryExpr
+    │   │       │   │   ├── operator: ==
+    │   │       │   │   ├── left: IdentifierExpr
+    │   │       │   │   │   └── name: n
+    │   │       │   │   └── right: LiteralExpr
+    │   │       │   │       ├── literal_type: CONSTANT_INT
+    │   │       │   │       └── value: 2
+    │   │       │   ├── then: ReturnStmt
+    │   │       │   │   └── expr: LiteralExpr
+    │   │       │   │       ├── literal_type: CONSTANT_BOOL
+    │   │       │   │       └── value: true
+    │   │       │   └── else: None
+    │   │       ├── IfStmt
+    │   │       │   ├── condition: BinaryExpr
+    │   │       │   │   ├── operator: ==
+    │   │       │   │   ├── left: BinaryExpr
+    │   │       │   │   │   ├── operator: %
+    │   │       │   │   │   ├── left: IdentifierExpr
+    │   │       │   │   │   │   └── name: n
+    │   │       │   │   │   └── right: LiteralExpr
+    │   │       │   │   │       ├── literal_type: CONSTANT_INT
+    │   │       │   │   │       └── value: 2
+    │   │       │   │   └── right: LiteralExpr
+    │   │       │   │       ├── literal_type: CONSTANT_INT
+    │   │       │   │       └── value: 0
+    │   │       │   ├── then: ReturnStmt
+    │   │       │   │   └── expr: LiteralExpr
+    │   │       │   │       ├── literal_type: CONSTANT_BOOL
+    │   │       │   │       └── value: false
+    │   │       │   └── else: None
+    │   │       ├── ForStmt
+    │   │       │   ├── init: VarDecl
+    │   │       │   │   ├── type: Type
+    │   │       │   │   │   ├── name: int
+    │   │       │   │   │   ├── base: int
+    │   │       │   │   │   ├── const: false
+    │   │       │   │   │   ├── reference: false
+    │   │       │   │   │   └── generic_args: []
+    │   │       │   │   ├── name: i
+    │   │       │   │   ├── init: LiteralExpr
+    │   │       │   │   │   ├── literal_type: CONSTANT_INT
+    │   │       │   │   │   └── value: 3
+    │   │       │   │   ├── line: 10
+    │   │       │   │   └── column: 10
+    │   │       │   ├── condition: BinaryExpr
+    │   │       │   │   ├── operator: <=
+    │   │       │   │   ├── left: BinaryExpr
+    │   │       │   │   │   ├── operator: *
+    │   │       │   │   │   ├── left: IdentifierExpr
+    │   │       │   │   │   │   └── name: i
+    │   │       │   │   │   └── right: IdentifierExpr
+    │   │       │   │   │       └── name: i
+    │   │       │   │   └── right: IdentifierExpr
+    │   │       │   │       └── name: n
+    │   │       │   ├── update: AssignExpr
+    │   │       │   │   ├── operator: +=
+    │   │       │   │   ├── left: IdentifierExpr
+    │   │       │   │   │   └── name: i
+    │   │       │   │   └── right: LiteralExpr
+    │   │       │   │       ├── literal_type: CONSTANT_INT
+    │   │       │   │       └── value: 2
+    │   │       │   └── body: BlockStmt
+    │   │       │       └── statements
+    │   │       │           └── IfStmt
+    │   │       │               ├── condition: BinaryExpr
+    │   │       │               │   ├── operator: ==
+    │   │       │               │   ├── left: BinaryExpr
+    │   │       │               │   │   ├── operator: %
+    │   │       │               │   │   ├── left: IdentifierExpr
+    │   │       │               │   │   │   └── name: n
+    │   │       │               │   │   └── right: IdentifierExpr
+    │   │       │               │   │       └── name: i
+    │   │       │               │   └── right: LiteralExpr
+    │   │       │               │       ├── literal_type: CONSTANT_INT
+    │   │       │               │       └── value: 0
+    │   │       │               ├── then: ReturnStmt
+    │   │       │               │   └── expr: LiteralExpr
+    │   │       │               │       ├── literal_type: CONSTANT_BOOL
+    │   │       │               │       └── value: false
+    │   │       │               └── else: None
+    │   │       └── ReturnStmt
+    │   │           └── expr: LiteralExpr
+    │   │               ├── literal_type: CONSTANT_BOOL
+    │   │               └── value: true
+    │   ├── line: 6
+    │   └── column: 6
+    ├── FunctionDecl
+    │   ├── return_type: Type
+    │   │   ├── name: double
+    │   │   ├── base: double
+    │   │   ├── const: false
+    │   │   ├── reference: false
+    │   │   └── generic_args: []
+    │   ├── name: average
+    │   ├── params
+    │   │   └── Param
+    │   │       ├── type: Type
+    │   │       │   ├── name: const std::vector<int>&
+    │   │       │   ├── base: std::vector
+    │   │       │   ├── const: true
+    │   │       │   ├── reference: true
+    │   │       │   └── generic_args
+    │   │       │       └── Type
+    │   │       │           ├── name: int
+    │   │       │           ├── base: int
+    │   │       │           ├── const: false
+    │   │       │           ├── reference: false
+    │   │       │           └── generic_args: []
+    │   │       ├── name: v
+    │   │       ├── line: 15
+    │   │       └── column: 40
+    │   ├── body: BlockStmt
+    │   │   └── statements
+    │   │       ├── IfStmt
+    │   │       │   ├── condition: CallExpr
+    │   │       │   │   ├── callee: MemberExpr
+    │   │       │   │   │   ├── object: IdentifierExpr
+    │   │       │   │   │   │   └── name: v
+    │   │       │   │   │   └── member: empty
+    │   │       │   │   └── args: []
+    │   │       │   ├── then: ReturnStmt
+    │   │       │   │   └── expr: LiteralExpr
+    │   │       │   │       ├── literal_type: CONSTANT_FLOAT
+    │   │       │   │       └── value: 0.0
+    │   │       │   └── else: None
+    │   │       ├── VarDeclStmt
+    │   │       │   └── declarations
+    │   │       │       └── VarDecl
+    │   │       │           ├── type: Type
+    │   │       │           │   ├── name: long long
+    │   │       │           │   ├── base: long long
+    │   │       │           │   ├── const: false
+    │   │       │           │   ├── reference: false
+    │   │       │           │   └── generic_args: []
+    │   │       │           ├── name: sum
+    │   │       │           ├── init: LiteralExpr
+    │   │       │           │   ├── literal_type: CONSTANT_INT
+    │   │       │           │   └── value: 0
+    │   │       │           ├── line: 17
+    │   │       │           └── column: 11
+    │   │       ├── RangeForStmt
+    │   │       │   ├── var: VarDecl
+    │   │       │   │   ├── type: Type
+    │   │       │   │   │   ├── name: int
+    │   │       │   │   │   ├── base: int
+    │   │       │   │   │   ├── const: false
+    │   │       │   │   │   ├── reference: false
+    │   │       │   │   │   └── generic_args: []
+    │   │       │   │   ├── name: x
+    │   │       │   │   ├── init: None
+    │   │       │   │   ├── line: 18
+    │   │       │   │   └── column: 10
+    │   │       │   ├── iterable: IdentifierExpr
+    │   │       │   │   └── name: v
+    │   │       │   └── body: ExprStmt
+    │   │       │       └── expr: AssignExpr
+    │   │       │           ├── operator: +=
+    │   │       │           ├── left: IdentifierExpr
+    │   │       │           │   └── name: sum
+    │   │       │           └── right: IdentifierExpr
+    │   │       │               └── name: x
+    │   │       └── ReturnStmt
+    │   │           └── expr: BinaryExpr
+    │   │               ├── operator: /
+    │   │               ├── left: CastExpr
+    │   │               │   ├── target_type: Type
+    │   │               │   │   ├── name: double
+    │   │               │   │   ├── base: double
+    │   │               │   │   ├── const: false
+    │   │               │   │   ├── reference: false
+    │   │               │   │   └── generic_args: []
+    │   │               │   └── expr: IdentifierExpr
+    │   │               │       └── name: sum
+    │   │               └── right: CallExpr
+    │   │                   ├── callee: MemberExpr
+    │   │                   │   ├── object: IdentifierExpr
+    │   │                   │   │   └── name: v
+    │   │                   │   └── member: size
+    │   │                   └── args: []
+    │   ├── line: 15
+    │   └── column: 8
+    ├── FunctionDecl
+    │   ├── return_type: Type
+    │   │   ├── name: int
+    │   │   ├── base: int
+    │   │   ├── const: false
+    │   │   ├── reference: false
+    │   │   └── generic_args: []
+    │   ├── name: factorial
+    │   ├── params
+    │   │   └── Param
+    │   │       ├── type: Type
+    │   │       │   ├── name: int
+    │   │       │   ├── base: int
+    │   │       │   ├── const: false
+    │   │       │   ├── reference: false
+    │   │       │   └── generic_args: []
+    │   │       ├── name: n
+    │   │       ├── line: 21
+    │   │       └── column: 19
+    │   ├── body: BlockStmt
+    │   │   └── statements
+    │   │       ├── VarDeclStmt
+    │   │       │   └── declarations
+    │   │       │       └── VarDecl
+    │   │       │           ├── type: Type
+    │   │       │           │   ├── name: int
+    │   │       │           │   ├── base: int
+    │   │       │           │   ├── const: false
+    │   │       │           │   ├── reference: false
+    │   │       │           │   └── generic_args: []
+    │   │       │           ├── name: result
+    │   │       │           ├── init: LiteralExpr
+    │   │       │           │   ├── literal_type: CONSTANT_INT
+    │   │       │           │   └── value: 1
+    │   │       │           ├── line: 22
+    │   │       │           └── column: 5
+    │   │       ├── VarDeclStmt
+    │   │       │   └── declarations
+    │   │       │       └── VarDecl
+    │   │       │           ├── type: Type
+    │   │       │           │   ├── name: int
+    │   │       │           │   ├── base: int
+    │   │       │           │   ├── const: false
+    │   │       │           │   ├── reference: false
+    │   │       │           │   └── generic_args: []
+    │   │       │           ├── name: i
+    │   │       │           ├── init: LiteralExpr
+    │   │       │           │   ├── literal_type: CONSTANT_INT
+    │   │       │           │   └── value: 2
+    │   │       │           ├── line: 23
+    │   │       │           └── column: 5
+    │   │       ├── WhileStmt
+    │   │       │   ├── condition: BinaryExpr
+    │   │       │   │   ├── operator: <=
+    │   │       │   │   ├── left: IdentifierExpr
+    │   │       │   │   │   └── name: i
+    │   │       │   │   └── right: IdentifierExpr
+    │   │       │   │       └── name: n
+    │   │       │   └── body: BlockStmt
+    │   │       │       └── statements
+    │   │       │           ├── ExprStmt
+    │   │       │           │   └── expr: AssignExpr
+    │   │       │           │       ├── operator: *=
+    │   │       │           │       ├── left: IdentifierExpr
+    │   │       │           │       │   └── name: result
+    │   │       │           │       └── right: IdentifierExpr
+    │   │       │           │           └── name: i
+    │   │       │           └── ExprStmt
+    │   │       │               └── expr: UnaryExpr
+    │   │       │                   ├── operator: ++
+    │   │       │                   ├── prefix: true
+    │   │       │                   └── operand: IdentifierExpr
+    │   │       │                       └── name: i
+    │   │       └── ReturnStmt
+    │   │           └── expr: IdentifierExpr
+    │   │               └── name: result
+    │   ├── line: 21
+    │   └── column: 5
+    └── FunctionDecl
+        ├── return_type: Type
+        │   ├── name: int
+        │   ├── base: int
+        │   ├── const: false
+        │   ├── reference: false
+        │   └── generic_args: []
+        ├── name: main
+        ├── params: []
+        ├── body: BlockStmt
+        │   └── statements
+        │       ├── VarDeclStmt
+        │       │   └── declarations
+        │       │       └── VarDecl
+        │       │           ├── type: Type
+        │       │           │   ├── name: int
+        │       │           │   ├── base: int
+        │       │           │   ├── const: false
+        │       │           │   ├── reference: false
+        │       │           │   └── generic_args: []
+        │       │           ├── name: a
+        │       │           ├── init: LiteralExpr
+        │       │           │   ├── literal_type: CONSTANT_INT
+        │       │           │   └── value: 5
+        │       │           ├── line: 31
+        │       │           └── column: 5
+        │       ├── VarDeclStmt
+        │       │   └── declarations
+        │       │       └── VarDecl
+        │       │           ├── type: Type
+        │       │           │   ├── name: int
+        │       │           │   ├── base: int
+        │       │           │   ├── const: false
+        │       │           │   ├── reference: false
+        │       │           │   └── generic_args: []
+        │       │           ├── name: b
+        │       │           ├── init: LiteralExpr
+        │       │           │   ├── literal_type: CONSTANT_INT
+        │       │           │   └── value: 3
+        │       │           ├── line: 31
+        │       │           └── column: 16
+        │       ├── VarDeclStmt
+        │       │   └── declarations
+        │       │       └── VarDecl
+        │       │           ├── type: Type
+        │       │           │   ├── name: int
+        │       │           │   ├── base: int
+        │       │           │   ├── const: false
+        │       │           │   ├── reference: false
+        │       │           │   └── generic_args: []
+        │       │           ├── name: c
+        │       │           ├── init: LiteralExpr
+        │       │           │   ├── literal_type: CONSTANT_INT
+        │       │           │   └── value: 0
+        │       │           ├── line: 32
+        │       │           └── column: 5
+        │       ├── ExprStmt
+        │       │   └── expr: AssignExpr
+        │       │       ├── operator: =
+        │       │       ├── left: IdentifierExpr
+        │       │       │   └── name: c
+        │       │       └── right: BinaryExpr
+        │       │           ├── operator: -
+        │       │           ├── left: BinaryExpr
+        │       │           │   ├── operator: +
+        │       │           │   ├── left: IdentifierExpr
+        │       │           │   │   └── name: a
+        │       │           │   └── right: BinaryExpr
+        │       │           │       ├── operator: *
+        │       │           │       ├── left: IdentifierExpr
+        │       │           │       │   └── name: b
+        │       │           │       └── right: LiteralExpr
+        │       │           │           ├── literal_type: CONSTANT_INT
+        │       │           │           └── value: 2
+        │       │           └── right: ParenExpr
+        │       │               └── expr: BinaryExpr
+        │       │                   ├── operator: /
+        │       │                   ├── left: IdentifierExpr
+        │       │                   │   └── name: a
+        │       │                   └── right: LiteralExpr
+        │       │                       ├── literal_type: CONSTANT_INT
+        │       │                       └── value: 2
+        │       ├── VarDeclStmt
+        │       │   └── declarations
+        │       │       └── VarDecl
+        │       │           ├── type: Type
+        │       │           │   ├── name: bool
+        │       │           │   ├── base: bool
+        │       │           │   ├── const: false
+        │       │           │   ├── reference: false
+        │       │           │   └── generic_args: []
+        │       │           ├── name: ok
+        │       │           ├── init: BinaryExpr
+        │       │           │   ├── operator: ||
+        │       │           │   ├── left: BinaryExpr
+        │       │           │   │   ├── operator: &&
+        │       │           │   │   ├── left: ParenExpr
+        │       │           │   │   │   └── expr: BinaryExpr
+        │       │           │   │   │       ├── operator: >
+        │       │           │   │   │       ├── left: IdentifierExpr
+        │       │           │   │   │       │   └── name: c
+        │       │           │   │   │       └── right: LiteralExpr
+        │       │           │   │   │           ├── literal_type: CONSTANT_INT
+        │       │           │   │   │           └── value: 0
+        │       │           │   │   └── right: ParenExpr
+        │       │           │   │       └── expr: BinaryExpr
+        │       │           │   │           ├── operator: !=
+        │       │           │   │           ├── left: IdentifierExpr
+        │       │           │   │           │   └── name: a
+        │       │           │   │           └── right: IdentifierExpr
+        │       │           │   │               └── name: b
+        │       │           │   └── right: UnaryExpr
+        │       │           │       ├── operator: !
+        │       │           │       ├── prefix: true
+        │       │           │       └── operand: ParenExpr
+        │       │           │           └── expr: BinaryExpr
+        │       │           │               ├── operator: <
+        │       │           │               ├── left: IdentifierExpr
+        │       │           │               │   └── name: b
+        │       │           │               └── right: LiteralExpr
+        │       │           │                   ├── literal_type: CONSTANT_INT
+        │       │           │                   └── value: 0
+        │       │           ├── line: 34
+        │       │           └── column: 6
+        │       ├── IfStmt
+        │       │   ├── condition: IdentifierExpr
+        │       │   │   └── name: ok
+        │       │   ├── then: BlockStmt
+        │       │   │   └── statements
+        │       │   │       └── ExprStmt
+        │       │   │           └── expr: BinaryExpr
+        │       │   │               ├── operator: <<
+        │       │   │               ├── left: BinaryExpr
+        │       │   │               │   ├── operator: <<
+        │       │   │               │   ├── left: BinaryExpr
+        │       │   │               │   │   ├── operator: <<
+        │       │   │               │   │   ├── left: IdentifierExpr
+        │       │   │               │   │   │   └── name: std::cout
+        │       │   │               │   │   └── right: LiteralExpr
+        │       │   │               │   │       ├── literal_type: CONSTANT_STRING
+        │       │   │               │   │       └── value: "ok: c="
+        │       │   │               │   └── right: IdentifierExpr
+        │       │   │               │       └── name: c
+        │       │   │               └── right: LiteralExpr
+        │       │   │                   ├── literal_type: CONSTANT_STRING
+        │       │   │                   └── value: "\n"
+        │       │   └── else: BlockStmt
+        │       │       └── statements
+        │       │           └── ExprStmt
+        │       │               └── expr: BinaryExpr
+        │       │                   ├── operator: <<
+        │       │                   ├── left: IdentifierExpr
+        │       │                   │   └── name: std::cout
+        │       │                   └── right: LiteralExpr
+        │       │                       ├── literal_type: CONSTANT_STRING
+        │       │                       └── value: "not ok\n"
+        │       ├── VarDeclStmt
+        │       │   └── declarations
+        │       │       └── VarDecl
+        │       │           ├── type: Type
+        │       │           │   ├── name: std::vector<int>
+        │       │           │   ├── base: std::vector
+        │       │           │   ├── const: false
+        │       │           │   ├── reference: false
+        │       │           │   └── generic_args
+        │       │           │       └── Type
+        │       │           │           ├── name: int
+        │       │           │           ├── base: int
+        │       │           │           ├── const: false
+        │       │           │           ├── reference: false
+        │       │           │           └── generic_args: []
+        │       │           ├── name: nums
+        │       │           ├── init: None
+        │       │           ├── line: 40
+        │       │           └── column: 18
+        │       ├── ForStmt
+        │       │   ├── init: VarDecl
+        │       │   │   ├── type: Type
+        │       │   │   │   ├── name: int
+        │       │   │   │   ├── base: int
+        │       │   │   │   ├── const: false
+        │       │   │   │   ├── reference: false
+        │       │   │   │   └── generic_args: []
+        │       │   │   ├── name: i
+        │       │   │   ├── init: LiteralExpr
+        │       │   │   │   ├── literal_type: CONSTANT_INT
+        │       │   │   │   └── value: 1
+        │       │   │   ├── line: 41
+        │       │   │   └── column: 10
+        │       │   ├── condition: BinaryExpr
+        │       │   │   ├── operator: <=
+        │       │   │   ├── left: IdentifierExpr
+        │       │   │   │   └── name: i
+        │       │   │   └── right: LiteralExpr
+        │       │   │       ├── literal_type: CONSTANT_INT
+        │       │   │       └── value: 20
+        │       │   ├── update: UnaryExpr
+        │       │   │   ├── operator: ++
+        │       │   │   ├── prefix: false
+        │       │   │   └── operand: IdentifierExpr
+        │       │   │       └── name: i
+        │       │   └── body: BlockStmt
+        │       │       └── statements
+        │       │           └── IfStmt
+        │       │               ├── condition: CallExpr
+        │       │               │   ├── callee: IdentifierExpr
+        │       │               │   │   └── name: isPrime
+        │       │               │   └── args
+        │       │               │       └── IdentifierExpr
+        │       │               │           └── name: i
+        │       │               ├── then: ExprStmt
+        │       │               │   └── expr: CallExpr
+        │       │               │       ├── callee: MemberExpr
+        │       │               │       │   ├── object: IdentifierExpr
+        │       │               │       │   │   └── name: nums
+        │       │               │       │   └── member: push_back
+        │       │               │       └── args
+        │       │               │           └── IdentifierExpr
+        │       │               │               └── name: i
+        │       │               └── else: None
+        │       ├── VarDeclStmt
+        │       │   └── declarations
+        │       │       └── VarDecl
+        │       │           ├── type: Type
+        │       │           │   ├── name: int
+        │       │           │   ├── base: int
+        │       │           │   ├── const: false
+        │       │           │   ├── reference: false
+        │       │           │   └── generic_args: []
+        │       │           ├── name: s
+        │       │           ├── init: CallExpr
+        │       │           │   ├── callee: IdentifierExpr
+        │       │           │   │   └── name: add
+        │       │           │   └── args
+        │       │           │       ├── IdentifierExpr
+        │       │           │       │   └── name: a
+        │       │           │       └── IdentifierExpr
+        │       │           │           └── name: b
+        │       │           ├── line: 44
+        │       │           └── column: 5
+        │       ├── ExprStmt
+        │       │   └── expr: BinaryExpr
+        │       │       ├── operator: <<
+        │       │       ├── left: BinaryExpr
+        │       │       │   ├── operator: <<
+        │       │       │   ├── left: BinaryExpr
+        │       │       │   │   ├── operator: <<
+        │       │       │   │   ├── left: IdentifierExpr
+        │       │       │   │   │   └── name: std::cout
+        │       │       │   │   └── right: LiteralExpr
+        │       │       │   │       ├── literal_type: CONSTANT_STRING
+        │       │       │   │       └── value: "add(a,b)="
+        │       │       │   └── right: IdentifierExpr
+        │       │       │       └── name: s
+        │       │       └── right: LiteralExpr
+        │       │           ├── literal_type: CONSTANT_STRING
+        │       │           └── value: "\n"
+        │       ├── ExprStmt
+        │       │   └── expr: BinaryExpr
+        │       │       ├── operator: <<
+        │       │       ├── left: BinaryExpr
+        │       │       │   ├── operator: <<
+        │       │       │   ├── left: BinaryExpr
+        │       │       │   │   ├── operator: <<
+        │       │       │   │   ├── left: IdentifierExpr
+        │       │       │   │   │   └── name: std::cout
+        │       │       │   │   └── right: LiteralExpr
+        │       │       │   │       ├── literal_type: CONSTANT_STRING
+        │       │       │   │       └── value: "avg(primes)="
+        │       │       │   └── right: CallExpr
+        │       │       │       ├── callee: IdentifierExpr
+        │       │       │       │   └── name: average
+        │       │       │       └── args
+        │       │       │           └── IdentifierExpr
+        │       │       │               └── name: nums
+        │       │       └── right: LiteralExpr
+        │       │           ├── literal_type: CONSTANT_STRING
+        │       │           └── value: "\n"
+        │       ├── ExprStmt
+        │       │   └── expr: BinaryExpr
+        │       │       ├── operator: <<
+        │       │       ├── left: BinaryExpr
+        │       │       │   ├── operator: <<
+        │       │       │   ├── left: BinaryExpr
+        │       │       │   │   ├── operator: <<
+        │       │       │   │   ├── left: IdentifierExpr
+        │       │       │   │   │   └── name: std::cout
+        │       │       │   │   └── right: LiteralExpr
+        │       │       │   │       ├── literal_type: CONSTANT_STRING
+        │       │       │   │       └── value: "factorial(6)="
+        │       │       │   └── right: CallExpr
+        │       │       │       ├── callee: IdentifierExpr
+        │       │       │       │   └── name: factorial
+        │       │       │       └── args
+        │       │       │           └── LiteralExpr
+        │       │       │               ├── literal_type: CONSTANT_INT
+        │       │       │               └── value: 6
+        │       │       └── right: LiteralExpr
+        │       │           ├── literal_type: CONSTANT_STRING
+        │       │           └── value: "\n"
+        │       ├── VarDeclStmt
+        │       │   └── declarations
+        │       │       └── VarDecl
+        │       │           ├── type: Type
+        │       │           │   ├── name: std::string
+        │       │           │   ├── base: std::string
+        │       │           │   ├── const: false
+        │       │           │   ├── reference: false
+        │       │           │   └── generic_args: []
+        │       │           ├── name: tricky
+        │       │           ├── init: LiteralExpr
+        │       │           │   ├── literal_type: CONSTANT_STRING
+        │       │           │   └── value: "this is not a comment: // and neither is /* ... */"
+        │       │           ├── line: 48
+        │       │           └── column: 13
+        │       ├── VarDeclStmt
+        │       │   └── declarations
+        │       │       └── VarDecl
+        │       │           ├── type: Type
+        │       │           │   ├── name: char
+        │       │           │   ├── base: char
+        │       │           │   ├── const: false
+        │       │           │   ├── reference: false
+        │       │           │   └── generic_args: []
+        │       │           ├── name: quote
+        │       │           ├── init: LiteralExpr
+        │       │           │   ├── literal_type: CONSTANT_STRING
+        │       │           │   └── value: '\''
+        │       │           ├── line: 49
+        │       │           └── column: 6
+        │       ├── ExprStmt
+        │       │   └── expr: BinaryExpr
+        │       │       ├── operator: <<
+        │       │       ├── left: BinaryExpr
+        │       │       │   ├── operator: <<
+        │       │       │   ├── left: BinaryExpr
+        │       │       │   │   ├── operator: <<
+        │       │       │   │   ├── left: BinaryExpr
+        │       │       │   │   │   ├── operator: <<
+        │       │       │   │   │   ├── left: IdentifierExpr
+        │       │       │   │   │   │   └── name: std::cout
+        │       │       │   │   │   └── right: IdentifierExpr
+        │       │       │   │   │       └── name: tricky
+        │       │       │   │   └── right: LiteralExpr
+        │       │       │   │       ├── literal_type: CONSTANT_STRING
+        │       │       │   │       └── value: " "
+        │       │       │   └── right: IdentifierExpr
+        │       │       │       └── name: quote
+        │       │       └── right: LiteralExpr
+        │       │           ├── literal_type: CONSTANT_STRING
+        │       │           └── value: "\n"
+        │       └── ReturnStmt
+        │           └── expr: LiteralExpr
+        │               ├── literal_type: CONSTANT_INT
+        │               └── value: 0
+        ├── line: 30
+        └── column: 5
