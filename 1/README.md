@@ -1,0 +1,1 @@
+Для запуска - python preprocessor/preprocess.py test/test.cpp -o test/test.cleaned.cpp
