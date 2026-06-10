@@ -1,0 +1,1196 @@
+{
+  "kind": "Program",
+  "functions": [
+    {
+      "kind": "FunctionDecl",
+      "return_type": {
+        "kind": "Type",
+        "name": "int",
+        "base": "int",
+        "const": false,
+        "reference": false,
+        "generic_args": []
+      },
+      "name": "add",
+      "params": [
+        {
+          "kind": "Param",
+          "type": {
+            "kind": "Type",
+            "name": "int",
+            "base": "int",
+            "const": false,
+            "reference": false,
+            "generic_args": []
+          },
+          "name": "x"
+        },
+        {
+          "kind": "Param",
+          "type": {
+            "kind": "Type",
+            "name": "int",
+            "base": "int",
+            "const": false,
+            "reference": false,
+            "generic_args": []
+          },
+          "name": "y"
+        }
+      ],
+      "body": {
+        "kind": "BlockStmt",
+        "statements": [
+          {
+            "kind": "ReturnStmt",
+            "expr": {
+              "kind": "BinaryExpr",
+              "operator": "+",
+              "left": {
+                "kind": "IdentifierExpr",
+                "name": "x"
+              },
+              "right": {
+                "kind": "IdentifierExpr",
+                "name": "y"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "FunctionDecl",
+      "return_type": {
+        "kind": "Type",
+        "name": "bool",
+        "base": "bool",
+        "const": false,
+        "reference": false,
+        "generic_args": []
+      },
+      "name": "isPrime",
+      "params": [
+        {
+          "kind": "Param",
+          "type": {
+            "kind": "Type",
+            "name": "int",
+            "base": "int",
+            "const": false,
+            "reference": false,
+            "generic_args": []
+          },
+          "name": "n"
+        }
+      ],
+      "body": {
+        "kind": "BlockStmt",
+        "statements": [
+          {
+            "kind": "IfStmt",
+            "condition": {
+              "kind": "BinaryExpr",
+              "operator": "<=",
+              "left": {
+                "kind": "IdentifierExpr",
+                "name": "n"
+              },
+              "right": {
+                "kind": "LiteralExpr",
+                "literal_type": "CONSTANT_INT",
+                "value": "1"
+              }
+            },
+            "then": {
+              "kind": "ReturnStmt",
+              "expr": {
+                "kind": "LiteralExpr",
+                "literal_type": "CONSTANT_BOOL",
+                "value": "false"
+              }
+            },
+            "else": null
+          },
+          {
+            "kind": "IfStmt",
+            "condition": {
+              "kind": "BinaryExpr",
+              "operator": "==",
+              "left": {
+                "kind": "IdentifierExpr",
+                "name": "n"
+              },
+              "right": {
+                "kind": "LiteralExpr",
+                "literal_type": "CONSTANT_INT",
+                "value": "2"
+              }
+            },
+            "then": {
+              "kind": "ReturnStmt",
+              "expr": {
+                "kind": "LiteralExpr",
+                "literal_type": "CONSTANT_BOOL",
+                "value": "true"
+              }
+            },
+            "else": null
+          },
+          {
+            "kind": "IfStmt",
+            "condition": {
+              "kind": "BinaryExpr",
+              "operator": "==",
+              "left": {
+                "kind": "BinaryExpr",
+                "operator": "%",
+                "left": {
+                  "kind": "IdentifierExpr",
+                  "name": "n"
+                },
+                "right": {
+                  "kind": "LiteralExpr",
+                  "literal_type": "CONSTANT_INT",
+                  "value": "2"
+                }
+              },
+              "right": {
+                "kind": "LiteralExpr",
+                "literal_type": "CONSTANT_INT",
+                "value": "0"
+              }
+            },
+            "then": {
+              "kind": "ReturnStmt",
+              "expr": {
+                "kind": "LiteralExpr",
+                "literal_type": "CONSTANT_BOOL",
+                "value": "false"
+              }
+            },
+            "else": null
+          },
+          {
+            "kind": "ForStmt",
+            "init": {
+              "kind": "VarDecl",
+              "type": {
+                "kind": "Type",
+                "name": "int",
+                "base": "int",
+                "const": false,
+                "reference": false,
+                "generic_args": []
+              },
+              "name": "i",
+              "init": {
+                "kind": "LiteralExpr",
+                "literal_type": "CONSTANT_INT",
+                "value": "3"
+              }
+            },
+            "condition": {
+              "kind": "BinaryExpr",
+              "operator": "<=",
+              "left": {
+                "kind": "BinaryExpr",
+                "operator": "*",
+                "left": {
+                  "kind": "IdentifierExpr",
+                  "name": "i"
+                },
+                "right": {
+                  "kind": "IdentifierExpr",
+                  "name": "i"
+                }
+              },
+              "right": {
+                "kind": "IdentifierExpr",
+                "name": "n"
+              }
+            },
+            "update": {
+              "kind": "AssignExpr",
+              "operator": "+=",
+              "left": {
+                "kind": "IdentifierExpr",
+                "name": "i"
+              },
+              "right": {
+                "kind": "LiteralExpr",
+                "literal_type": "CONSTANT_INT",
+                "value": "2"
+              }
+            },
+            "body": {
+              "kind": "BlockStmt",
+              "statements": [
+                {
+                  "kind": "IfStmt",
+                  "condition": {
+                    "kind": "BinaryExpr",
+                    "operator": "==",
+                    "left": {
+                      "kind": "BinaryExpr",
+                      "operator": "%",
+                      "left": {
+                        "kind": "IdentifierExpr",
+                        "name": "n"
+                      },
+                      "right": {
+                        "kind": "IdentifierExpr",
+                        "name": "i"
+                      }
+                    },
+                    "right": {
+                      "kind": "LiteralExpr",
+                      "literal_type": "CONSTANT_INT",
+                      "value": "0"
+                    }
+                  },
+                  "then": {
+                    "kind": "ReturnStmt",
+                    "expr": {
+                      "kind": "LiteralExpr",
+                      "literal_type": "CONSTANT_BOOL",
+                      "value": "false"
+                    }
+                  },
+                  "else": null
+                }
+              ]
+            }
+          },
+          {
+            "kind": "ReturnStmt",
+            "expr": {
+              "kind": "LiteralExpr",
+              "literal_type": "CONSTANT_BOOL",
+              "value": "true"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "FunctionDecl",
+      "return_type": {
+        "kind": "Type",
+        "name": "double",
+        "base": "double",
+        "const": false,
+        "reference": false,
+        "generic_args": []
+      },
+      "name": "average",
+      "params": [
+        {
+          "kind": "Param",
+          "type": {
+            "kind": "Type",
+            "name": "const std::vector<int>&",
+            "base": "std::vector",
+            "const": true,
+            "reference": true,
+            "generic_args": [
+              {
+                "kind": "Type",
+                "name": "int",
+                "base": "int",
+                "const": false,
+                "reference": false,
+                "generic_args": []
+              }
+            ]
+          },
+          "name": "v"
+        }
+      ],
+      "body": {
+        "kind": "BlockStmt",
+        "statements": [
+          {
+            "kind": "IfStmt",
+            "condition": {
+              "kind": "CallExpr",
+              "callee": {
+                "kind": "MemberExpr",
+                "object": {
+                  "kind": "IdentifierExpr",
+                  "name": "v"
+                },
+                "member": "empty"
+              },
+              "args": []
+            },
+            "then": {
+              "kind": "ReturnStmt",
+              "expr": {
+                "kind": "LiteralExpr",
+                "literal_type": "CONSTANT_FLOAT",
+                "value": "0.0"
+              }
+            },
+            "else": null
+          },
+          {
+            "kind": "VarDeclStmt",
+            "declarations": [
+              {
+                "kind": "VarDecl",
+                "type": {
+                  "kind": "Type",
+                  "name": "long long",
+                  "base": "long long",
+                  "const": false,
+                  "reference": false,
+                  "generic_args": []
+                },
+                "name": "sum",
+                "init": {
+                  "kind": "LiteralExpr",
+                  "literal_type": "CONSTANT_INT",
+                  "value": "0"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "RangeForStmt",
+            "var": {
+              "kind": "VarDecl",
+              "type": {
+                "kind": "Type",
+                "name": "int",
+                "base": "int",
+                "const": false,
+                "reference": false,
+                "generic_args": []
+              },
+              "name": "x",
+              "init": null
+            },
+            "iterable": {
+              "kind": "IdentifierExpr",
+              "name": "v"
+            },
+            "body": {
+              "kind": "ExprStmt",
+              "expr": {
+                "kind": "AssignExpr",
+                "operator": "+=",
+                "left": {
+                  "kind": "IdentifierExpr",
+                  "name": "sum"
+                },
+                "right": {
+                  "kind": "IdentifierExpr",
+                  "name": "x"
+                }
+              }
+            }
+          },
+          {
+            "kind": "ReturnStmt",
+            "expr": {
+              "kind": "BinaryExpr",
+              "operator": "/",
+              "left": {
+                "kind": "CastExpr",
+                "target_type": {
+                  "kind": "Type",
+                  "name": "double",
+                  "base": "double",
+                  "const": false,
+                  "reference": false,
+                  "generic_args": []
+                },
+                "expr": {
+                  "kind": "IdentifierExpr",
+                  "name": "sum"
+                }
+              },
+              "right": {
+                "kind": "CallExpr",
+                "callee": {
+                  "kind": "MemberExpr",
+                  "object": {
+                    "kind": "IdentifierExpr",
+                    "name": "v"
+                  },
+                  "member": "size"
+                },
+                "args": []
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "FunctionDecl",
+      "return_type": {
+        "kind": "Type",
+        "name": "int",
+        "base": "int",
+        "const": false,
+        "reference": false,
+        "generic_args": []
+      },
+      "name": "factorial",
+      "params": [
+        {
+          "kind": "Param",
+          "type": {
+            "kind": "Type",
+            "name": "int",
+            "base": "int",
+            "const": false,
+            "reference": false,
+            "generic_args": []
+          },
+          "name": "n"
+        }
+      ],
+      "body": {
+        "kind": "BlockStmt",
+        "statements": [
+          {
+            "kind": "VarDeclStmt",
+            "declarations": [
+              {
+                "kind": "VarDecl",
+                "type": {
+                  "kind": "Type",
+                  "name": "int",
+                  "base": "int",
+                  "const": false,
+                  "reference": false,
+                  "generic_args": []
+                },
+                "name": "result",
+                "init": {
+                  "kind": "LiteralExpr",
+                  "literal_type": "CONSTANT_INT",
+                  "value": "1"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "VarDeclStmt",
+            "declarations": [
+              {
+                "kind": "VarDecl",
+                "type": {
+                  "kind": "Type",
+                  "name": "int",
+                  "base": "int",
+                  "const": false,
+                  "reference": false,
+                  "generic_args": []
+                },
+                "name": "i",
+                "init": {
+                  "kind": "LiteralExpr",
+                  "literal_type": "CONSTANT_INT",
+                  "value": "2"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "WhileStmt",
+            "condition": {
+              "kind": "BinaryExpr",
+              "operator": "<=",
+              "left": {
+                "kind": "IdentifierExpr",
+                "name": "i"
+              },
+              "right": {
+                "kind": "IdentifierExpr",
+                "name": "n"
+              }
+            },
+            "body": {
+              "kind": "BlockStmt",
+              "statements": [
+                {
+                  "kind": "ExprStmt",
+                  "expr": {
+                    "kind": "AssignExpr",
+                    "operator": "*=",
+                    "left": {
+                      "kind": "IdentifierExpr",
+                      "name": "result"
+                    },
+                    "right": {
+                      "kind": "IdentifierExpr",
+                      "name": "i"
+                    }
+                  }
+                },
+                {
+                  "kind": "ExprStmt",
+                  "expr": {
+                    "kind": "UnaryExpr",
+                    "operator": "++",
+                    "prefix": true,
+                    "operand": {
+                      "kind": "IdentifierExpr",
+                      "name": "i"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "kind": "ReturnStmt",
+            "expr": {
+              "kind": "IdentifierExpr",
+              "name": "result"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "FunctionDecl",
+      "return_type": {
+        "kind": "Type",
+        "name": "int",
+        "base": "int",
+        "const": false,
+        "reference": false,
+        "generic_args": []
+      },
+      "name": "main",
+      "params": [],
+      "body": {
+        "kind": "BlockStmt",
+        "statements": [
+          {
+            "kind": "VarDeclStmt",
+            "declarations": [
+              {
+                "kind": "VarDecl",
+                "type": {
+                  "kind": "Type",
+                  "name": "int",
+                  "base": "int",
+                  "const": false,
+                  "reference": false,
+                  "generic_args": []
+                },
+                "name": "a",
+                "init": {
+                  "kind": "LiteralExpr",
+                  "literal_type": "CONSTANT_INT",
+                  "value": "5"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "VarDeclStmt",
+            "declarations": [
+              {
+                "kind": "VarDecl",
+                "type": {
+                  "kind": "Type",
+                  "name": "int",
+                  "base": "int",
+                  "const": false,
+                  "reference": false,
+                  "generic_args": []
+                },
+                "name": "b",
+                "init": {
+                  "kind": "LiteralExpr",
+                  "literal_type": "CONSTANT_INT",
+                  "value": "3"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "VarDeclStmt",
+            "declarations": [
+              {
+                "kind": "VarDecl",
+                "type": {
+                  "kind": "Type",
+                  "name": "int",
+                  "base": "int",
+                  "const": false,
+                  "reference": false,
+                  "generic_args": []
+                },
+                "name": "c",
+                "init": {
+                  "kind": "LiteralExpr",
+                  "literal_type": "CONSTANT_INT",
+                  "value": "0"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "ExprStmt",
+            "expr": {
+              "kind": "AssignExpr",
+              "operator": "=",
+              "left": {
+                "kind": "IdentifierExpr",
+                "name": "c"
+              },
+              "right": {
+                "kind": "BinaryExpr",
+                "operator": "-",
+                "left": {
+                  "kind": "BinaryExpr",
+                  "operator": "+",
+                  "left": {
+                    "kind": "IdentifierExpr",
+                    "name": "a"
+                  },
+                  "right": {
+                    "kind": "BinaryExpr",
+                    "operator": "*",
+                    "left": {
+                      "kind": "IdentifierExpr",
+                      "name": "b"
+                    },
+                    "right": {
+                      "kind": "LiteralExpr",
+                      "literal_type": "CONSTANT_INT",
+                      "value": "2"
+                    }
+                  }
+                },
+                "right": {
+                  "kind": "ParenExpr",
+                  "expr": {
+                    "kind": "BinaryExpr",
+                    "operator": "/",
+                    "left": {
+                      "kind": "IdentifierExpr",
+                      "name": "a"
+                    },
+                    "right": {
+                      "kind": "LiteralExpr",
+                      "literal_type": "CONSTANT_INT",
+                      "value": "2"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "kind": "VarDeclStmt",
+            "declarations": [
+              {
+                "kind": "VarDecl",
+                "type": {
+                  "kind": "Type",
+                  "name": "bool",
+                  "base": "bool",
+                  "const": false,
+                  "reference": false,
+                  "generic_args": []
+                },
+                "name": "ok",
+                "init": {
+                  "kind": "BinaryExpr",
+                  "operator": "||",
+                  "left": {
+                    "kind": "BinaryExpr",
+                    "operator": "&&",
+                    "left": {
+                      "kind": "ParenExpr",
+                      "expr": {
+                        "kind": "BinaryExpr",
+                        "operator": ">",
+                        "left": {
+                          "kind": "IdentifierExpr",
+                          "name": "c"
+                        },
+                        "right": {
+                          "kind": "LiteralExpr",
+                          "literal_type": "CONSTANT_INT",
+                          "value": "0"
+                        }
+                      }
+                    },
+                    "right": {
+                      "kind": "ParenExpr",
+                      "expr": {
+                        "kind": "BinaryExpr",
+                        "operator": "!=",
+                        "left": {
+                          "kind": "IdentifierExpr",
+                          "name": "a"
+                        },
+                        "right": {
+                          "kind": "IdentifierExpr",
+                          "name": "b"
+                        }
+                      }
+                    }
+                  },
+                  "right": {
+                    "kind": "UnaryExpr",
+                    "operator": "!",
+                    "prefix": true,
+                    "operand": {
+                      "kind": "ParenExpr",
+                      "expr": {
+                        "kind": "BinaryExpr",
+                        "operator": "<",
+                        "left": {
+                          "kind": "IdentifierExpr",
+                          "name": "b"
+                        },
+                        "right": {
+                          "kind": "LiteralExpr",
+                          "literal_type": "CONSTANT_INT",
+                          "value": "0"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "kind": "IfStmt",
+            "condition": {
+              "kind": "IdentifierExpr",
+              "name": "ok"
+            },
+            "then": {
+              "kind": "BlockStmt",
+              "statements": [
+                {
+                  "kind": "ExprStmt",
+                  "expr": {
+                    "kind": "BinaryExpr",
+                    "operator": "<<",
+                    "left": {
+                      "kind": "BinaryExpr",
+                      "operator": "<<",
+                      "left": {
+                        "kind": "BinaryExpr",
+                        "operator": "<<",
+                        "left": {
+                          "kind": "IdentifierExpr",
+                          "name": "std::cout"
+                        },
+                        "right": {
+                          "kind": "LiteralExpr",
+                          "literal_type": "CONSTANT_STRING",
+                          "value": "\"ok: c=\""
+                        }
+                      },
+                      "right": {
+                        "kind": "IdentifierExpr",
+                        "name": "c"
+                      }
+                    },
+                    "right": {
+                      "kind": "LiteralExpr",
+                      "literal_type": "CONSTANT_STRING",
+                      "value": "\"\\n\""
+                    }
+                  }
+                }
+              ]
+            },
+            "else": {
+              "kind": "BlockStmt",
+              "statements": [
+                {
+                  "kind": "ExprStmt",
+                  "expr": {
+                    "kind": "BinaryExpr",
+                    "operator": "<<",
+                    "left": {
+                      "kind": "IdentifierExpr",
+                      "name": "std::cout"
+                    },
+                    "right": {
+                      "kind": "LiteralExpr",
+                      "literal_type": "CONSTANT_STRING",
+                      "value": "\"not ok\\n\""
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "kind": "VarDeclStmt",
+            "declarations": [
+              {
+                "kind": "VarDecl",
+                "type": {
+                  "kind": "Type",
+                  "name": "std::vector<int>",
+                  "base": "std::vector",
+                  "const": false,
+                  "reference": false,
+                  "generic_args": [
+                    {
+                      "kind": "Type",
+                      "name": "int",
+                      "base": "int",
+                      "const": false,
+                      "reference": false,
+                      "generic_args": []
+                    }
+                  ]
+                },
+                "name": "nums",
+                "init": null
+              }
+            ]
+          },
+          {
+            "kind": "ForStmt",
+            "init": {
+              "kind": "VarDecl",
+              "type": {
+                "kind": "Type",
+                "name": "int",
+                "base": "int",
+                "const": false,
+                "reference": false,
+                "generic_args": []
+              },
+              "name": "i",
+              "init": {
+                "kind": "LiteralExpr",
+                "literal_type": "CONSTANT_INT",
+                "value": "1"
+              }
+            },
+            "condition": {
+              "kind": "BinaryExpr",
+              "operator": "<=",
+              "left": {
+                "kind": "IdentifierExpr",
+                "name": "i"
+              },
+              "right": {
+                "kind": "LiteralExpr",
+                "literal_type": "CONSTANT_INT",
+                "value": "20"
+              }
+            },
+            "update": {
+              "kind": "UnaryExpr",
+              "operator": "++",
+              "prefix": false,
+              "operand": {
+                "kind": "IdentifierExpr",
+                "name": "i"
+              }
+            },
+            "body": {
+              "kind": "BlockStmt",
+              "statements": [
+                {
+                  "kind": "IfStmt",
+                  "condition": {
+                    "kind": "CallExpr",
+                    "callee": {
+                      "kind": "IdentifierExpr",
+                      "name": "isPrime"
+                    },
+                    "args": [
+                      {
+                        "kind": "IdentifierExpr",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  "then": {
+                    "kind": "ExprStmt",
+                    "expr": {
+                      "kind": "CallExpr",
+                      "callee": {
+                        "kind": "MemberExpr",
+                        "object": {
+                          "kind": "IdentifierExpr",
+                          "name": "nums"
+                        },
+                        "member": "push_back"
+                      },
+                      "args": [
+                        {
+                          "kind": "IdentifierExpr",
+                          "name": "i"
+                        }
+                      ]
+                    }
+                  },
+                  "else": null
+                }
+              ]
+            }
+          },
+          {
+            "kind": "VarDeclStmt",
+            "declarations": [
+              {
+                "kind": "VarDecl",
+                "type": {
+                  "kind": "Type",
+                  "name": "int",
+                  "base": "int",
+                  "const": false,
+                  "reference": false,
+                  "generic_args": []
+                },
+                "name": "s",
+                "init": {
+                  "kind": "CallExpr",
+                  "callee": {
+                    "kind": "IdentifierExpr",
+                    "name": "add"
+                  },
+                  "args": [
+                    {
+                      "kind": "IdentifierExpr",
+                      "name": "a"
+                    },
+                    {
+                      "kind": "IdentifierExpr",
+                      "name": "b"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "kind": "ExprStmt",
+            "expr": {
+              "kind": "BinaryExpr",
+              "operator": "<<",
+              "left": {
+                "kind": "BinaryExpr",
+                "operator": "<<",
+                "left": {
+                  "kind": "BinaryExpr",
+                  "operator": "<<",
+                  "left": {
+                    "kind": "IdentifierExpr",
+                    "name": "std::cout"
+                  },
+                  "right": {
+                    "kind": "LiteralExpr",
+                    "literal_type": "CONSTANT_STRING",
+                    "value": "\"add(a,b)=\""
+                  }
+                },
+                "right": {
+                  "kind": "IdentifierExpr",
+                  "name": "s"
+                }
+              },
+              "right": {
+                "kind": "LiteralExpr",
+                "literal_type": "CONSTANT_STRING",
+                "value": "\"\\n\""
+              }
+            }
+          },
+          {
+            "kind": "ExprStmt",
+            "expr": {
+              "kind": "BinaryExpr",
+              "operator": "<<",
+              "left": {
+                "kind": "BinaryExpr",
+                "operator": "<<",
+                "left": {
+                  "kind": "BinaryExpr",
+                  "operator": "<<",
+                  "left": {
+                    "kind": "IdentifierExpr",
+                    "name": "std::cout"
+                  },
+                  "right": {
+                    "kind": "LiteralExpr",
+                    "literal_type": "CONSTANT_STRING",
+                    "value": "\"avg(primes)=\""
+                  }
+                },
+                "right": {
+                  "kind": "CallExpr",
+                  "callee": {
+                    "kind": "IdentifierExpr",
+                    "name": "average"
+                  },
+                  "args": [
+                    {
+                      "kind": "IdentifierExpr",
+                      "name": "nums"
+                    }
+                  ]
+                }
+              },
+              "right": {
+                "kind": "LiteralExpr",
+                "literal_type": "CONSTANT_STRING",
+                "value": "\"\\n\""
+              }
+            }
+          },
+          {
+            "kind": "ExprStmt",
+            "expr": {
+              "kind": "BinaryExpr",
+              "operator": "<<",
+              "left": {
+                "kind": "BinaryExpr",
+                "operator": "<<",
+                "left": {
+                  "kind": "BinaryExpr",
+                  "operator": "<<",
+                  "left": {
+                    "kind": "IdentifierExpr",
+                    "name": "std::cout"
+                  },
+                  "right": {
+                    "kind": "LiteralExpr",
+                    "literal_type": "CONSTANT_STRING",
+                    "value": "\"factorial(6)=\""
+                  }
+                },
+                "right": {
+                  "kind": "CallExpr",
+                  "callee": {
+                    "kind": "IdentifierExpr",
+                    "name": "factorial"
+                  },
+                  "args": [
+                    {
+                      "kind": "LiteralExpr",
+                      "literal_type": "CONSTANT_INT",
+                      "value": "6"
+                    }
+                  ]
+                }
+              },
+              "right": {
+                "kind": "LiteralExpr",
+                "literal_type": "CONSTANT_STRING",
+                "value": "\"\\n\""
+              }
+            }
+          },
+          {
+            "kind": "VarDeclStmt",
+            "declarations": [
+              {
+                "kind": "VarDecl",
+                "type": {
+                  "kind": "Type",
+                  "name": "std::string",
+                  "base": "std::string",
+                  "const": false,
+                  "reference": false,
+                  "generic_args": []
+                },
+                "name": "tricky",
+                "init": {
+                  "kind": "LiteralExpr",
+                  "literal_type": "CONSTANT_STRING",
+                  "value": "\"this is not a comment: // and neither is /* ... */\""
+                }
+              }
+            ]
+          },
+          {
+            "kind": "VarDeclStmt",
+            "declarations": [
+              {
+                "kind": "VarDecl",
+                "type": {
+                  "kind": "Type",
+                  "name": "char",
+                  "base": "char",
+                  "const": false,
+                  "reference": false,
+                  "generic_args": []
+                },
+                "name": "quote",
+                "init": {
+                  "kind": "LiteralExpr",
+                  "literal_type": "CONSTANT_STRING",
+                  "value": "'\\''"
+                }
+              }
+            ]
+          },
+          {
+            "kind": "ExprStmt",
+            "expr": {
+              "kind": "BinaryExpr",
+              "operator": "<<",
+              "left": {
+                "kind": "BinaryExpr",
+                "operator": "<<",
+                "left": {
+                  "kind": "BinaryExpr",
+                  "operator": "<<",
+                  "left": {
+                    "kind": "BinaryExpr",
+                    "operator": "<<",
+                    "left": {
+                      "kind": "IdentifierExpr",
+                      "name": "std::cout"
+                    },
+                    "right": {
+                      "kind": "IdentifierExpr",
+                      "name": "tricky"
+                    }
+                  },
+                  "right": {
+                    "kind": "LiteralExpr",
+                    "literal_type": "CONSTANT_STRING",
+                    "value": "\" \""
+                  }
+                },
+                "right": {
+                  "kind": "IdentifierExpr",
+                  "name": "quote"
+                }
+              },
+              "right": {
+                "kind": "LiteralExpr",
+                "literal_type": "CONSTANT_STRING",
+                "value": "\"\\n\""
+              }
+            }
+          },
+          {
+            "kind": "ReturnStmt",
+            "expr": {
+              "kind": "LiteralExpr",
+              "literal_type": "CONSTANT_INT",
+              "value": "0"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
